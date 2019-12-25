@@ -81,3 +81,4 @@ http://1c.taxpravo.ru/
 ```
 
 Good luck! Но знайте, Google Analytics намного круче. :)
+[Web version](https://masterpro.herokuapp.com/analytics/index).
