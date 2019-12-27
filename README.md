@@ -4,6 +4,9 @@
 
 Загрузите скрипт (требует ruby, также 'dotenv', 'typhoeus', 'json'), укажите идентификатор счетчика и токен авторизации в файле .env, и... запускайте магию. Используя [список группировок и метрик](https://yandex.ru/dev/metrika/doc/api2/api_v1/attrandmetr/dim_all-docpage) - крайне несложно изменять/добавлять параметры запроса, получая практически любую статистику посредством API Яндекс.Метрика.
 
+[Read more](https://masterpro.ws/api-yandex-metrica-ruby)
+
+
 ```bash
 ruby bin/start.rb
 
