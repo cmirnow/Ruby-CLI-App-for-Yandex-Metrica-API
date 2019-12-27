@@ -35,3 +35,31 @@ Analytics.query('ym:s:externalRefererPathLevel1')['data'].first(10).each do |i|
   puts i['dimensions'][0]['name']
   puts i['metrics'][0].to_i
 end
+
+puts ''
+puts '*********** Browsers ***********'
+puts ''
+
+Analytics.query('ym:s:browser')['data'].each do |i|
+  puts i['dimensions'][0]['name']
+  puts i['metrics'][0].to_i
+end
+
+puts ''
+puts '*********** Yesterday Sources Summary ***********'
+puts ''
+
+Analytics.query1('sources_summary')['data'].each do |i|
+  puts i['dimensions'][0]['name']
+  puts i['dimensions'][1]['name']
+  puts i['metrics'][0].to_i
+end
+
+puts ''
+puts '*********** Yesterday Search Phrases ***********'
+puts ''
+
+Analytics.query1('sources_search_phrases')['data'].each do |i|
+  puts i['dimensions'][0]['name']
+  puts i['metrics'][0].to_i
+end

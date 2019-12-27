@@ -13,7 +13,7 @@ class YandexMetrika
         'metrics' => 'ym:s:visits',
         'dimensions' => dimension,
         'lang' => 'en',
-        'date1' => '15daysAgo',
+        'date1' => '1daysAgo',
         'date2' => 'yesterday',
         'accuracy' => 'full'
       },
@@ -24,4 +24,23 @@ class YandexMetrika
     )
     JSON.parse(response.body)
   end
+
+  def self.inquiry1(token, ids, preset)
+    response = Typhoeus::Request.get(
+      'https://api-metrika.yandex.ru/stat/v1/data',
+      params: {
+        'ids' => ids,
+        'preset' => preset,
+        'date1' => '1daysAgo',
+        'date2' => 'yesterday',
+        'accuracy' => 'full'
+      },
+      headers: {
+        Accept: 'application/x-yametrika+json',
+        Authorization: 'OAuth' + token
+      }
+    )
+    JSON.parse(response.body)
+  end
+
 end
