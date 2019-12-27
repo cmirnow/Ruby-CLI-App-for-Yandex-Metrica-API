@@ -49,7 +49,7 @@ puts ''
 puts '*********** Yesterday Sources Summary ***********'
 puts ''
 
-Analytics.query1('sources_summary')['data'].each do |i|
+Analytics.query('sources_summary')['data'].each do |i|
   puts i['dimensions'][0]['name']
   puts i['dimensions'][1]['name']
   puts i['metrics'][0].to_i
@@ -59,7 +59,7 @@ puts ''
 puts '*********** Yesterday Search Phrases ***********'
 puts ''
 
-Analytics.query1('sources_search_phrases')['data'].each do |i|
+Analytics.query('sources_search_phrases')['data'].each do |i|
   puts i['dimensions'][0]['name']
   puts i['metrics'][0].to_i
 end

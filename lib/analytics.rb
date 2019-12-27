@@ -3,12 +3,7 @@
 require_relative 'yandex_metrika.rb'
 
 class Analytics
-  def self.query(dimension)
-    YandexMetrika.inquiry(ENV['AUTH_TOKEN_METRIKA'], ENV['IDS_METRIKA'], dimension)
+  def self.query(v)
+    YandexMetrika.dimension_or_preset?(ENV['AUTH_TOKEN_METRIKA'], ENV['IDS_METRIKA'], v)
   end
-
-  def self.query1(preset)
-    YandexMetrika.inquiry1(ENV['AUTH_TOKEN_METRIKA'], ENV['IDS_METRIKA'], preset)
-  end
-
 end
