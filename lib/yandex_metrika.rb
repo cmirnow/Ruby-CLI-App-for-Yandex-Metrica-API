@@ -25,10 +25,10 @@ class YandexMetrika
                  'accuracy' => 'full'
                }
                end
-    inquiry(token, ids, params)
+    inquiry(token, params)
     end
 
-  def self.inquiry(token, _ids, params)
+  def self.inquiry(token, params)
     response = Typhoeus::Request.get(
       'https://api-metrika.yandex.ru/stat/v1/data',
       params: params,
