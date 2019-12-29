@@ -14,6 +14,17 @@ class YandexMetrika
                  'date2' => 'yesterday',
                  'accuracy' => 'full'
                }
+             elsif v.include? 'searchEngine'
+               {
+                 'ids' => ids,
+                 'metrics' => 'ym:s:visits,ym:s:users',
+                 'dimensions' => v,
+                 # 'lang' => 'en',
+                 'date1' => '1daysAgo',
+                 'date2' => 'yesterday',
+                 'filters' => "ym:s:trafficSource=='organic'",
+                 'accuracy' => 'full'
+               }
              else
                {
                  'ids' => ids,
@@ -24,9 +35,9 @@ class YandexMetrika
                  'date2' => 'yesterday',
                  'accuracy' => 'full'
                }
-               end
+              end
     inquiry(token, params)
-    end
+  end
 
   def self.inquiry(token, params)
     response = Typhoeus::Request.get(

@@ -63,3 +63,12 @@ Analytics.query('sources_search_phrases')['data'].each do |i|
   puts i['dimensions'][0]['name']
   puts i['metrics'][0].to_i
 end
+
+puts ''
+puts '*********** Visits and Visitors Based on Search Engines ***********'
+puts ''
+
+Analytics.query('ym:s:searchEngine')['data'].each do |i|
+  puts i['dimensions'][0]['name']
+  puts i['metrics'][0].to_i
+end
