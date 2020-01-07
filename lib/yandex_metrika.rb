@@ -6,8 +6,8 @@ class YandexMetrika
                {
                  'ids' => ids,
                  'preset' => v,
-                 'date1' => 'yesterday',
-                 'date2' => 'yesterday',
+                 'date1' => 'today',
+                 'date2' => 'today',
                  'accuracy' => 'full'
                }
              elsif v.include? 'searchEngine'
@@ -16,8 +16,8 @@ class YandexMetrika
                  'metrics' => 'ym:s:visits,ym:s:users',
                  'dimensions' => v,
                  # 'lang' => 'en',
-                 'date1' => 'yesterday',
-                 'date2' => 'yesterday',
+                 'date1' => 'today',
+                 'date2' => 'today',
                  'filters' => "ym:s:trafficSource=='organic'",
                  'accuracy' => 'full'
                }
@@ -27,8 +27,8 @@ class YandexMetrika
                  'metrics' => 'ym:s:visits',
                  'dimensions' => v,
                  'lang' => 'en',
-                 'date1' => 'yesterday',
-                 'date2' => 'yesterday',
+                 'date1' => 'today',
+                 'date2' => 'today',
                  'accuracy' => 'full'
                }
                end
