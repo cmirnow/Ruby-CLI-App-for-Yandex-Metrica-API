@@ -29,10 +29,10 @@ ids = if gets.strip == '1'
   ['ym:s:regionCity', 'City', 'Visitors by Cities'],
   ['ym:s:externalRefererPathLevel1', 'Referer', 'External Referers'],
   ['ym:s:browser', 'Browser', 'Browsers'],
-  ['sources_search_phrases', 'Phrase', 'Today`s Search Phrases'],
+  ['sources_search_phrases', 'Phrase', 'Search Phrases'],
   ['ym:s:searchEngine', 'Search Engine', 'Visits and Visitors Based on Search Engines']
 ].each do |args|
   Analytics.table(*args.push([date, ids]).flatten!)
 end
 
-Analytics.table_1('sources_summary', 'Title', 'Source', 'Today`s Sources Summary', date, ids)
+Analytics.table_1('sources_summary', 'Title', 'Source', 'Sources Summary', date, ids)
