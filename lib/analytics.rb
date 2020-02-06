@@ -6,7 +6,7 @@ class Analytics
   def self.table(x, th1, title, date, ids)
     rows = []
     query(x, date, ids)['data'].each do |i|
-      rows << [i['dimensions'][0]['name'], i['metrics'][0].to_i]
+      rows << [i['dimensions'][0]['name'].split(//).last(100).join, i['metrics'][0].to_i]
     end
     puts Terminal::Table.new title: title, headings: [th1, 'Number'], rows: rows
     puts ''
