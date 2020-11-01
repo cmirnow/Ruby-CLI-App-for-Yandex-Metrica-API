@@ -20,4 +20,4 @@ Good luck! Но знайте, Google Analytics намного круче. :)
 
 [Read more](https://masterpro.ws/api-yandex-metrica-ruby)
 
-[Web version](https://masterpro.herokuapp.com/analytics/index).
+[Web version](https://masterpro.herokuapp.com/yametrica).
